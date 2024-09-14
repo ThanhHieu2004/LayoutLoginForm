@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/my_gradient_drawable"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonLogin"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:layout_marginTop="100dp"
-        android:text="Button"
+        android:text="Login"
         app:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,9 +25,13 @@
         android:layout_height="50dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/custom_inputs"
+        android:drawableLeft="@drawable/baseline_person"
+        android:drawablePadding="10dp"
         android:ems="10"
-        android:hint="Your name here"
+        android:hint="PhamThanhHieu"
         android:inputType="text"
+        android:paddingLeft="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -37,9 +41,13 @@
         android:layout_height="50dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="24dp"
+        android:background="@drawable/custom_inputs"
+        android:drawableLeft="@drawable/baseline_security"
+        android:drawablePadding="10dp"
         android:ems="10"
-        android:hint="@string/app_name"
+        android:hint="22115053122115"
         android:inputType="textPassword"
+        android:paddingLeft="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -99,32 +107,62 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:orientation="horizontal"
         android:weightSum="3"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/facebook"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:src="@drawable/facebook" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/google"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:src="@drawable/google" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/linkedin"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:src="@drawable/linkedin" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New User?" />
+
+        <TextView
+            android:id="@+id/textViewRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Register"
+            android:textStyle="italic"
+            android:background="@drawable/text_underline"
+            android:textColor="@color/colorPrimaryDark"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
